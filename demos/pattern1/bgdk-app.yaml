@@ -5,30 +5,16 @@ metadata:
   namespace: argocd
 spec:
   destination:
-    name: ''
     namespace: bgdk
-    server: 'https://kubernetes.default.svc'
+    server: https://kubernetes.default.svc
+  project: default
   source:
     path: apps/pattern1/bgd/overlays/bgdk
-    repoURL: 'https://github.com/saurav116/GitOps-Patterns.git'
-    targetRevision: HEAD
-  project: default
+    repoURL: https://github.com/rcarrata/kcd23ams-gitops-patterns
+    targetRevision: main
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
-source:
-  repoURL: 'https://github.com/saurav116/GitOps-Patterns.git'
-  path: apps/pattern1/bgd/overlays/bgdk
-  targetRevision: HEAD
-destination:
-  server: 'https://kubernetes.default.svc'
-  namespace: bgdk
-syncPolicy:
-  automated:
-    prune: true
-    selfHeal: true
-  syncOptions:
-    - CreateNamespace=true
