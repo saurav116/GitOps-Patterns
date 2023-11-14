@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     path: apps/pattern2/todo
-    repoURL: https://github.com/rcarrata/kcd23ams-gitops-patterns
+    repoURL: https://github.com/saurav116/GitOps-Patterns
     targetRevision: main
   syncPolicy:
     automated:
