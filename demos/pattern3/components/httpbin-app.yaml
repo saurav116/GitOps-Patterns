@@ -4,9 +4,9 @@ metadata:
   name: dev-env-httpbin-app
 spec:
   destination:
-    namespace: httpbin
+    namespace: argocd
     server: https://kubernetes.default.svc
-  project: dev-env-project
+  project: default
   source:
     path: apps/pattern3/dev-env/apps/httpbin-app
     repoURL: https://github.com/saurav116/GitOps-Patterns
