@@ -9,8 +9,8 @@ spec:
   project: dev-env-project
   source:
     path: apps/pattern3/dev-env/namespaces/project002
-    repoURL: https://github.com/rcarrata/kcd23ams-gitops-patterns
-    targetRevision: main
+    repoURL: https://github.com/saurav116/GitOps-Patterns
+    targetRevision: HEAD
   syncPolicy:
     automated:
       prune: true
