@@ -4,16 +4,17 @@ metadata:
   name: dev-env-project001
 spec:
   destination:
+    name: ''
     namespace: argocd
-    server: https://kubernetes.default.svc
-  project: dev-env-project
+    server: 'https://kubernetes.default.svc'
   source:
     path: apps/pattern3/dev-env/namespaces/project001
-    repoURL: https://github.com/saurav116/GitOps-Patterns
+    repoURL: 'https://github.com/saurav116/GitOps-Patterns.git'
     targetRevision: HEAD
+  project: default
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
-    # syncOptions:
-    #   - CreateNamespace=true
+    syncOptions:
+      - CreateNamespace=true
