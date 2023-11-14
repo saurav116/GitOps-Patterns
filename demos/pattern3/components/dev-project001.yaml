@@ -4,7 +4,6 @@ metadata:
   name: dev-env-project001
 spec:
   destination:
-    name: ''
     namespace: argocd
     server: 'https://kubernetes.default.svc'
   source:
