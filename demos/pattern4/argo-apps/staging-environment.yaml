@@ -15,7 +15,7 @@ spec:
     metadata:
       name: "{{path.basename}}"
     spec:
-      project: staging-env-appset-project
+      project: default
       syncPolicy:
         automated:
           prune: true
