@@ -10,7 +10,7 @@ spec:
   source:
     path: apps/pattern2/todo
     repoURL: https://github.com/saurav116/GitOps-Patterns
-    targetRevision: main
+    targetRevision: HEAD
   syncPolicy:
     automated:
       prune: true
