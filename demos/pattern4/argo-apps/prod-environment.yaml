@@ -2,11 +2,11 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: prod-env-appset
-  namespace: argocd
+  namespace: openshift-gitops
 spec:
   generators:
     - git:
-        repoURL: https://github.com/rcarrata/kcd23ams-gitops-patterns
+        repoURL: https://github.com/saurav116/GitOps-Patterns
         revision: main
         directories:
           - path: apps/pattern4/prod-env/apps/*
@@ -21,7 +21,7 @@ spec:
           prune: true
           selfHeal: true
       source:
-        repoURL: https://github.com/rcarrata/kcd23ams-gitops-patterns
+        repoURL: https://github.com/saurav116/GitOps-Patterns
         targetRevision: main
         path: "{{path}}"
       destination:
